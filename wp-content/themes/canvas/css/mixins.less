@@ -1,0 +1,111 @@
+/**
+ * Functions
+ */
+.iconafter() {
+    font-family: 'FontAwesome';
+    display: inline-block;
+    font-size:100%;
+    margin-left:.618em;
+    font-weight: normal;
+    line-height: 1em;
+    width:1em;
+    text-align: right;
+}
+
+.iconbefore() {
+    font-family: 'FontAwesome';
+    display: inline-block;
+    font-size:100%;
+    margin-right:.618em;
+    font-weight: normal;
+    line-height: 1em;
+    width:1em;
+}
+
+.border_radius(@radius:4px) {
+-webkit-border-radius:@radius;
+-moz-border-radius:@radius;
+border-radius:@radius;
+}
+
+.border_radius_right(@radius:4px) {
+-webkit-border-top-right-radius: @radius;
+-webkit-border-bottom-right-radius: @radius;
+-moz-border-radius-topright: @radius;
+-moz-border-radius-bottomright: @radius;
+border-top-right-radius: @radius;
+border-bottom-right-radius: @radius;
+}
+
+.border_radius_left(@radius:4px) { 
+-webkit-border-top-left-radius: @radius;
+-webkit-border-bottom-left-radius: @radius;
+-moz-border-radius-topleft: @radius;
+-moz-border-radius-bottomleft: @radius;
+border-top-left-radius: @radius;
+border-bottom-left-radius: @radius;
+}
+
+.border_radius_bottom(@radius:4px) {
+-webkit-border-bottom-left-radius: @radius;
+-webkit-border-bottom-right-radius: @radius;
+-moz-border-radius-bottomleft: @radius;
+-moz-border-radius-bottomright: @radius;
+border-bottom-left-radius: @radius;
+border-bottom-right-radius: @radius;
+}
+
+.border_radius_top(@radius:4px) {
+-webkit-border-top-left-radius: @radius;
+-webkit-border-top-right-radius: @radius;
+-moz-border-radius-topleft: @radius;
+-moz-border-radius-topright: @radius;
+border-top-left-radius: @radius;
+border-top-right-radius: @radius;
+}
+
+.opacity(@opacity:0.75) { filter:~"alpha(opacity=@opacity * 100)"; -moz-opacity:@opacity; -khtml-opacity: @opacity; opacity: @opacity; }
+
+.box_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_in:3px, @shadow_color:#888) {
+box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+-webkit-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+-moz-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+}
+
+.inset_box_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_in:3px, @shadow_color:#888) {
+box-shadow:inset @shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+-webkit-box-shadow:inset @shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+-moz-box-shadow:inset @shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+}
+
+.text_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_color:#fff) {
+text-shadow:@shadow_x @shadow_y @shadow_rad @shadow_color;
+}
+
+.vertical_gradient(@from: #000, @to: #FFF) {
+background: @from;
+background: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+background: -webkit-linear-gradient(@from, @to);
+background: -moz-linear-gradient(center top, @from 0%, @to 100%);
+background: -moz-gradient(center top, @from 0%, @to 100%);
+}
+
+.transition(@selector:all, @animation:ease-in-out, @duration:.2s) {
+    -webkit-transition:@selector @animation @duration;
+    -moz-transition:@selector @animation @duration;
+    -o-transition:@selector @animation @duration;
+    transition:@selector @animation @duration;
+}
+.borderbox () {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.clearfix() {
+	&:after {
+		content:"";
+		display:block;
+		clear:both;
+	}
+}

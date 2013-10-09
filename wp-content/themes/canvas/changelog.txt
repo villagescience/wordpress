@@ -1,0 +1,1049 @@
+*** Canvas Changelog ***
+
+2013.04.11 - version 5.2.0
+ * MAJOR UPDATE - Includes HTML5 tags, Full Width Layout option, Mobile Nav refresh
+ * style.css,
+   css/layout.css,
+   theme-actions.php,
+   theme-options.php - Added Full width Layout functionality.
+ * style.css,
+   css/fontawesome.less,
+   includes/theme-shortcodes.php - included FontAwesome through style.css and updated icons in theme. Removed WebSymbolsFonts.
+ * 404.php,
+   archive*.php,
+   content*.php,
+   footer.php,
+   header.php,
+   index.php,
+   search.php,
+   sidebar*.php,
+   single*.php,
+   taxonomy*.php,
+   template*.php,
+   /includes/theme-actions.php,
+   /includes/theme-functions.php,
+   /includes/theme-woocommerce.php,
+   /includes/js/modernizr.js - Added HTML5 tags (header, navigation, article, section, aside, footer)
+ * style.css,
+   css/layout.css,
+   includes/theme-actions.php,
+   includes/theme-options.php,
+   includes/theme-woocommerce.php - New mobile navigation and tweaked styling for navigation and icons.
+ * functions.php,
+   /includes/theme-actions.php - Optimized includes and moved tumblog
+ * /includes/theme-actions.php - Fix archive header typography option. Added missing esc_url() around the woo_subscribe_email option output in woo_nav_subscribe(). Fixes undefined index in woo_feedburner_link(). Fixed undefined index in woo_custom_styling().
+ * /includes/theme-functions.php - Adds missing esc_url() when outputting the author URL in woo_display_feedback_entries().
+ * /includes/theme-shortcodes.php - Make sure all shortcode attributes are run through wp_kses_post() before being output.
+ * /includes/tumblog/theme-tumblog.php - Data escaping in the woo_tumblog_quote_content(), woo_tumblog_category_link() and woo_custom_tumblog_rss_output() functions.
+ * /includes/tumblog/theme-custom-post-types.php - Sanitizes $_GET values in woo_tumblog_restrict_manage_posts() and woo_tumblog_posts_where() functions.
+ * template-sitemap.php - Replace query_posts() with a new WP_Query().
+ * template-timeline.php - Replace query_posts() with a new WP_Query().
+ * template-imagegallery.php - Replace query_posts() with a new WP_Query().
+ * template-feedback.php - Replace query_posts() with a new WP_Query(). Wrap URLs in esc_url().
+ * template-archives.php - Replace query_posts() with a new WP_Query().
+ * template-contact.php - Sanitize form values with sanitize_* functions in the form handler.
+ * includes/theme-actions.php - fixed meta mobile viewport scale to use semicolon to colon as seperator. Adds woo_logo(), woo_nav_toggle() and woo_top_ad() functions.
+ * includes/theme-functions.php - Added Excerpt to the Slide post type.
+ * header.php - Moves logo, mobile navigation toggle and top ad into woo_logo(), woo_nav_toggle() and woo_top_ad() functions, hooked on woo_header_inside at priorities 10, 20, and 30 respectively.
+ * /includes/widgets/widget-woo-feedback.php - Prevent Feedback JS from loading on each screen.
+ * /includes/js/jcarousel.min.js - REMOVED.
+ * /includes/theme-js.php - Removes wp_register_script() call for jCarousel.
+ * includes/fonts/social.*,
+   includes/theme-functions.php,
+   includes/theme-options.php,
+   style.css - New Social font to replace old Subscribe & Connect icons. Added Dribbble, Instagram, Vimeo and Pinterest.
+ * includes/js/jquery.prettyPhoto.js - updated to version 3.1.5
+
+2013.03.05 - version 5.1.6
+ * style.css - Fixed one column layout of portfolio on mobile. Styling for archive_description.
+ * css/layout.css - changed width on dropdowns from % to em.
+ * includes/theme-options.php - Remove "image" custom field if TimThumb is disabled. Updated URL to get map coordinates. Remove Tumblog section from options if it Tumblog not in use (Tumblog will be depreceated)
+ * includes/theme-actions.php - Fixed slideSpeed to be instant if Animation set to 0.0 seconds. Set Biz slider with background image to use post excerpt instead of content. Remove warning about static homepage being set.
+ * includes/theme-woocommerce.php - Updated woocommerce_header_add_to_cart() with better code.
+ * includes/js/general.js - Disabled prettyPhoto lightbox on mobile devices
+ * includes/js/portfolio.js - Disabled prettyPhoto lightbox on mobile devices
+ * includes/theme-functions.php - Fix for disabling mouse scroll on contact page maps.
+ * includes/theme-comments.php - removed old commenter name function with depreceated ereg_replace() function.
+ * includes/theme-functions.php - new function woo_archive_description()
+ * loop-archive.php - new call to woo_archive_description()
+
+2013.02.22 - version 5.1.5
+ * includes/theme-woocommerce.php - WooCommerce 2.0 pagination preparation. Upsells now displayed in column number of columns.
+ * css/woocommerce.css - Styling preparation for WooCommerce 2.0 standardised class names (.woocommerce-). Star ratings in loop styled and retina optimised. Cart Collaterals styling tidy up. Improved tab styling. Styled the remove button in the cart. Stlying for .woocommerce-info. Styled order details. Styled checkout input validation.
+ * style.css - Moved table styles into style.css and updated. Updated product search form styling.
+ * includes/theme-actions.php - Updated method of showing non-responsive.css in IE8. Fixed class space issue on slider.
+
+2013.02.07 - version 5.1.4
+ * style.css - <sub> & <sup> styling.
+ * /ncludes/theme-options.php - added new option to disable responsive design to General Layout.
+ * style.css,
+   css/layout.css,
+   template-contact.php - Fixed alignment of Subscribe icons on contact page template.
+ * /includes/js/general.js - tweaked fitVids() to load on posts and pages on mobile (less than 768px)
+ * /includes/theme-actions.php - removed respond.js function and added function to remove responsive design in IE8. Adds filter for the query if the "Magazine" page template is set as the front page.
+ * style.css - fixed image caption font. Fixed mobile nav cart alignment. Set strong tag to use font-weigh bold.
+ * includes/theme-woocommerce.php - added WooCommerce support flag
+
+2013.01.15 - version 5.1.3
+ * /includes/js/portfolio.js - Move height fixing JavaScript to run on window.load() to avoid bunching of portfolio items.
+
+2013.01.10 - version 5.1.2
+ * /includes/woo-meta/classes/woo-meta.class.php - Commented out call to wp_editor() as unused at present.
+ * style.css - fixed issue with sidebar alignment on iPad (768px)
+ * header.php - removed duplicate loading of style.css (it is loaded in theme-actions.php)
+
+2012.12.31 - version 5.1.1
+ * /includes/theme-actions.php - add missing responsive meta tags in HEAD (5.1 bug). Add version number to "theme-stylesheet" stylesheet enqueue.
+ * /includes/theme-functions.php - Retrieve the "alt" text for the images in the woo_get_post_images() function.
+ * /includes/theme-options.php - Fix "General Styling" typo in theme options. Replace TEMPLATEPATH with get_template_directory().
+ * /includes/tumblog/wootumblog_postformat.class.php - Remove unused _e() when listing the taxonomy terms for filtering in the WordPress admin.
+ * /includes/woo-meta/classes/woo-meta.class.php - Replace call to wp_tiny_mce() with wp_editor().
+ * /includes/widgets/widget-woo-blogauthor.php - Remove unused translation function call from the value of the Gravatar e-mail setting field.
+ * /includes/js/portfolio.js - Replace .height() with .outerHeight() to account for margin spacing on portfolio items when spacing the items for tag sorting.
+ * template-contact.php - Use sprintf() and remove variables from translation string in the body of the e-mails.
+ * functions.php - Replace TEMPLATEPATH with get_template_directory(). Load the WooTumblog RSS replacements only on the frontend.
+ * loop-portfolio.php - Add image tags for image gallery image and add the image's alt text in an alt attribute on the image, for prettyPhoto title support.
+ * style.less,
+   style.css - Hide #portfolio .gallery-image as we now insert the image tag to add support for prettyPhoto titles, and don't need the image to display.
+
+2012.12.20 - version 5.1.0
+ * /includes/js/general.js - fitVids only to run on mobile devices.
+ * /includes/theme-options.php - Add theme options for displaying a cart header link, as well as setting a custom placeholder image URL. Moved Dynamic Images tab.
+ * /includes/theme-woocommerce.php - Add logic for the cart header link and custom placeholder image.
+ * /images/wc-placeholder.gif - ADDED - Default placeholder image for WooCommerce products.
+ * /includes/fonts/fontawesome-webfont.eot,
+   /includes/fonts/fontawesome-webfont.svg,
+   /includes/fonts/fontawesome-webfont.ttf,
+   /includes/fonts/fontawesome-webfont.woff - ADDED - FontAwesome font-face.
+ * /includes/gallery.php - Remove use of SlidesJS and jCarousel, displaying the images in a list instead. Add "noheight=true" to the woo_image() calls, for responsive images.
+ * /includes/theme-js.php - "portfolio" script no longer requires "jCarousel" and "widgetSlider" scripts.
+ * /includes/theme-actions.php - Adjust default portfolio image width to be 520 pixels instead of 500. Moved slider pagination outside of the slider containers for the "Magazine" and "Business" sliders. Added Featured Images support to Biz slider. Add useCSS = false to the FlexSlider init JavaScript, to fix embedded videos that weren't playing in the "Business" slider. Remove "maximum-scale" meta tag from the header.
+ * /includes/theme-functions.php - Optimize woo_portfolio_image_dimensions() function to avoid a large switch statement and to work better with the variable site width theme option. Fixed notice errors in woo_connect()
+ * /includes/js/general.js - Adjust fitVids selector to ignore videos inside the entry content.
+ * loop-portfolio.php - Add with max-width to each portfolio item DIV, to cater for long entry titles.
+ * /css/mixins.less,
+   /css/mixins.css - Added "iconbefore" and "iconafter" LESS functions.
+ * /css/woocommerce.less,
+   /css/woocommerce.css - Add styling for the header cart link. WooCommerce 2.0 syling prep - hidden webkit buttons on number inputs, product ordering.
+ * /includes/woo-layout/assets/js/jquery.layout.js,
+   /includes/woo-layout/assets/js/jquery.layout.min.js - Update jQuery.layout to use ".css" instead of old ".curCSS" jQuery method.
+ * /includes/woo-layout/classes/woo-layout.class.php - Enable "one-col" for the Layout Manager to fix "undefined index" notice on the Layout Manager screen.
+ * /includes/theme-shortcodes.php - Hide woo_shortcode_post_comments() by default if the comments are disabled, instead of leaving the output on by default. General code clean-up and maintenance.
+ * content-magazine-grid.php,
+   content-magazine-featured.php - Do not show featured image if full content is set.
+ * style.less,
+   style.css - Add spacing below portfolio thumbnail image, to create breathing room between thumbnail and portfolio item title on the "Portfolio" page template. Add styling for the new portfolio item image gallery layout. Fixed blockquote in IE9. Added list-style to widgets. Updated button styling. Adjusted slider styling to avoid using overflows. Added styling for slider pagination, now that it exists outside of the slideshow container. Added border to portfolio images. General style fixes. Make sure sidebar has clear: both on small-screen devices.
+
+2012.11.29 - version 5.0.13
+ * style.css,
+   /css/layout.css,
+   /includes/theme-actions.php - Fix for IE8 and child themes. Moved layout.less out of style.css and created layout.css which loads separately in the header.
+ * /includes/theme-actions.php - Updates "Magazine" and "Business" sliders' markup to use the "slide-ID" for the ID of each slide, and the "slide-number-X" convention as a CSS class on each slide. Load site width CSS in the header.
+ * /includes/theme-js.php - Removes "woo-responsive-layout" CSS enqueue, in favour of outputting the CSS in the header. Registers "non-responsive" CSS stylesheet.
+ * /includes/theme-options.php - Set "TimThumb" theme option to be disabled by default. If it is, update custom fields to show a message instead of the "image" upload field. Change "Slide Page" custom field label to "Slide Group" for consistency with the WooSlider plugin.
+ * /css/non-responsive.css - New file to be used if disabling responsive design http://support.woothemes.com/knowledgebase/articles/128471-remove-responsive-layout-from-canvas
+
+2012.11.23 - version 5.0.12
+ * /includes/theme-actions.php - Move the custom styles loader to wp_head instead of wp_enqueue_scripts.
+
+2012.11.22 - version 5.0.11
+ * style.css - Magazine slider pagination styling fix.
+ * /css/layout.css - Removed,not being compiled directly anymore.
+ * /css/layout.less - Moved media query inside layout.css, instead of around @import in style.less.
+ * /css/woocommerce.css - star rating widget will display correctly outside of standard widget regions. Single product title margin. Cart totals responsiveness. Spacing after variations in cart widget.
+ * /includes/theme-actions.php - Output custom CSS in the "head" tag, instead of an additional HTTP request. Load CSS on the theme options screen to increase the height of the WooFramework interface. Added functions to load respond.js for IE8.
+ * /includes/theme-options.php - Combine and consolidate theme options sections for a cleaner UX.
+ * /includes/js/general.js - Make sure the "title" attribute of an image isn't overwritten if it exists when enabling the lightbox on that image's link. Add logic to group images in a lightbox group if they are in a gallery. Apply top nav responsive to IE8
+ * /includes/theme-functions.php - Adjust the homepage category exclusion query to fire only on if $query->is_home() instead of on is_home().
+ * /includes/sidebar-init.php - Remove "widget" CSS class from all widgets in the "Homepage" and "Widgets Page Template" widget areas.
+ * search-form.php - Make sure the search isn't restricted to posts if not set to search only for products.
+ * /includes/js/respond.js - Add file
+
+2012.10.12 - version 5.0.10
+ * /includes/js/respond-ie.js - Deleted
+ * /includes/theme-actions.php - Remove responsive support for IE8. Add noheight=true to the woo_image() calls in the "Business" slider. Add optional "$tags" parameter (second parameter) to the "woo_slider_magazine()" function. Tabs widget styling options apply to WooDojo tabs widget.
+ * /includes/theme-functions.php - Remove responsive support for IE8
+ * /includes/js/general.js - Disabled mobileMenu script for IE8
+ * header.php - Fix is_ssl() conditional replacement to use "https://" / "http://" instead of "https" / "http" as the replacement.
+ * style.less, css/layout.less - Switched to LESS files, as they are needed for the way we have to import the CSS to remove responsive support from IE8
+ * style.css, layout/layout.css - Removed IE8 responsive support. Portfolio image IE8 fix. Remove Gravity form text styling.
+
+2012.09.13 - version 5.0.9
+ * Native WooCommerce Support
+ * functions.php - Load WooCommerce functions only if WooCommerce is active.
+ * /css/woocommerce.css - ADDED - WooCommerce styles.
+ * /css/woocommerce.less - ADDED - WooCommerce styles.
+ * /images/icons/* - ADDED - WooCommerce icons.
+ * /images/ajax-loader.gif - ADDED - WooCommerce AJAX loader graphic.
+ * /includes/theme-woocommerce.php - ADDED - WooCommerce-specific functions.
+ * template-sitemap.php - modified with additional WooCommerce functionality
+
+2012.09.05 - version 5.0.8
+ * /css/layout.css - Make sure the #main DIV on one-column layouts isn't floated.
+ * /includes/theme-options.php - Added option for button hover color. Gettext theme options that were not yet translatable ("Contact" section and "Hover Pause" under "Slider Settings"). Adjust titles and descriptions of the "Magazine Template" section to be more informative.
+ * /includes/theme-actions.php - Fixed button color output & added hover output. Load slider JavaScript on the "template-widgets.php" page template. Adjust JavaScript in "woo_slider()" to support multiple instances of the slideshows. Make custom CSS loader functions pluggable. Restore height calculation to the "Magazine" slider images using the "Image Height" option in the "Magazine Template" section of "Theme Options".
+ * /includes/theme-js.php - Load FlexSlider on the "template-widgets.php" page template.
+ * /includes/sidebar-init.php - Code standards clean-up. Add more informative descriptions to each registered sidebar. Register "widgets-page-template" and "homepage" sidebars.
+ * /includes/widgets/widget-woo-component.php - ADDED - WooThemes component selector widget, primarily for use with the "Widgets" page template.
+ * /includes/theme-widgets.php - Update widget loading logic. Add "widget-woo-component.php" to the list of widgets to be loaded.
+ * /includes/css/prettyPhoto.css - Remove references to unused images. Replace with updated references to existing images.
+ * /lang/en_GB.po - Rescanned the language file.
+ * index.php - Add conditional check for if the "homepage" sidebar is active. If so, display that sidebar instead of the default loop.
+ * template-widgets.php - ADDED - page template that calls the "widgets-page-template" registered sidebar, if widgets are added. If not, the default page content is displayed.
+ * style.css - Reformat font-face CSS. Add 'background-size: cover;' to #header. Make sure slideshow pagination displays correctly inside the "Woo - Component" widget. Add minor CSS update for WooSlider compatibility.
+ * header.php - Code maintenance. Add SSL checks to the custom image URLs for the logo and top ad images.
+
+2012.08.15 - version 5.0.7
+ * style.css - Changed slider content to sit below slider for mobile resolutions.
+ 			 - Fixed slider links for iOS. Styled feedback widget.
+ 			 - Added -webkit-font-smoothing: antialiased; to fix jumping text when using Flexslider "slide" animation.
+ * /css/layout.css - Changed slider content to sit below slider for mobile resolutions.
+ 				  - Fixed border-radius for mobile nav.
+ 				  - Fixed business slider arrow for low resolutions.
+ 				  - Fixed responsive bug with RSS icon in nav.
+ 				  - Fixed slider arrows for low res.
+ * /includes/theme-functions.php - Tweaked feedback widget output.
+ * /includes/gallery.php - Fixed JCarousel thumbnails for portfolio template
+ * /includes/widgets/widget-woo-twitter.php - Added "Twitter" text for default widget title
+ * /includes/widgets/widget-woo-feedback.php - Force pagination to false as pagination is now handled by FlexSlider.
+ * /includes/theme-js.php - Load FlexSlider for the "woo-feedback" JavaScript instead of SlidesJS.
+ 						  - Localise text for the "next" and "previous" buttons in FlexSlider for the "Woo - Feedback" widget.
+ * /includes/theme-options.php - Clarify labels on the post styling options to read "Post / Page".
+ 							   - Move certain archive-specific styling options to an "Archives" subheading.
+ * /includes/theme-actions.php - Routine maintenance and code standards optimisations. Convert custom options styling to load in a dynamic CSS loader, instead of on wp_head (resolves conflict with "respond-ie.js" file in some older web browsers). Remove redundant width and height adjustments from the canvas_get_embed() function.
+ * /includes/js/general.js - Added .page selector for FitVids
+ 						  - Added .parent class for non WP menus
+ * /includes/js/jquery.flexslider.min.js - Update FlexSlider to version 2.1.
+ * /includes/js/feedback.js - Replace SlidesJS with FlexSlider in the "Woo - Feedback" widget's JavaScript.
+ 							- Removed width function, was causing problems with responsiveness.
+ * /includes/js/general.js - Added portfolio page to FitVids.
+ * /includes/js/respond-ie.js - Reverted back to using original "respond.js" instead of "css3-media-queries.js"
+ * /images/ico-subscribe-social.png - Updated Twitter Icon
+ * /images/twitter.png - Updated Twitter Icon
+
+2012.07.10 - version 5.0.6
+ * style.css - Image scaling IE8 fix for slider images. Fixed nav ul width for mobile resolutions. Image width fix for IE8. Fixed "filter" property for subscribe & connect social icons. Flexslider active pagination color. Removed IE "filter" property from buttons, was causing issues with rounded corners.
+ * css/layout.css - UL nav width for desktop resolutions.
+ * template-magazine.php - Clearfix after slider.
+ * template-contact.php - added clearfix after contact form for responsive
+
+2012.07.04 - version 5.0.5
+ * /includes/theme-actions.php - Adjust slider options to integrate with FlexSlider V2. Remove custom smoothHeight functionality, which is no longer required. Added background-position & background-attachment options for body bg.
+ * /includes/theme-functions.php - Escaped various values in the woo_maps_contact_output() function. Replace bloginfo() calls for the template directory URI with get_template_directory_uri(). Fixed archive headers output
+ * includes/theme-options.php - Added background-position & background-attachment options for body background image.
+ * /includes/theme-js.php - Add "woo_localized_data" array of localized strings and assign to the "general" JavaScript (makes "Select a page:" translatable).
+ * /includes/js/jquery.flexslider.min.js - Update to FlexSlider V2.
+ * /includes/js/general.js - Use woo_localized_data.select_a_page instead of "Select a page:" text, to make the text translatable.
+ * loop-archive.php - Added H1 for archive headers.
+ * loop-search.php - Replace "span" tag around the search results header with an "h1" tag.
+ * style.css - Replace a.next and a.prev, in the slider styles, with a.flex-next and a.flex-prev in accordance with FlexSlider V2. Fixed width bug with captioned blog images.
+
+2012.06.20 - version 5.0.4
+ * style.css - Removed width for gravity forms labels
+ 			 - Removed "width: auto" for blog images from modern browsers and move to IE8 specific selector
+
+2012.06.18 - version 5.0.3
+ * includes/woo-layout/classes/woo-layout.class.php - Added media query for Layout Manager output.
+
+2012.06.11 - version 5.0.2
+ * /includes/js/respond-ie.js - Replaced with http://code.google.com/p/css3-mediaqueries-js/
+ * /includes/js/portfolio.js - Disable social_tools in prettyPhoto.
+ * /includes/js/general.js - Disable social_tools in prettyPhoto.
+ * /includes/js/jquery.prettyPhoto.js - Upgrade prettyPhoto to version 3.1.4.
+ * /includes/css/prettyPhoto.css - Upgrade prettyPhoto to version 3.1.4. Adjust CSS to remove unused CSS declarations.
+ * /includes/images/prettyPhoto/ - Upgrade prettyPhoto to version 3.1.4.
+ * /includes/theme-js.php - Rename 'third party' to 'third-party' and add as a dependency on 'general'.
+ * /includes/woo-hooks/screens/admin.php - Remove unused heading links and adjust link to the forum.
+ * /includes/woo-meta/screens/admin.php - Remove unused heading links and adjust link to the forum.
+ * /includes/woo-layout/screens/admin.php - Remove unused heading links and adjust link to the forum.
+ * header.php - Added "icon" class to the nav-toggle element
+ * style.css - Removed "filter" property from #navigation, was giving issues in IE
+             - Tweaked nav-toggle styling
+ * css/layout.css - Tweaked boxed layout for mobile resolutions
+
+2012.06.06 - version 5.0.1
+ * style.css - Fixed magazine template responsive columns
+ 			 - Fluid in-post images
+ 			 - Subscribe & connect social icons overlap
+ 			 - Archive page headers fix
+ * /css/layout.css - Fixed business slider overlap
+                   - Fixed magazine template responsive columns
+ * /includes/theme-options.php - Added more options for navigation item (text, bg, hover, current, dropdown borders, divider border). Changed max width in the "site width" description to 1600.
+ * /includes/theme-actions.php - Make sure the "Magazine" slider respects the "Featured Slider Entries" theme option correctly.
+ 							   - Adjust custom styling selectors to fix primary navigation custom colors.
+ 							   - Fixed respond-ie.js call.
+ 							   - Make sure the footer widgets don't display if the "none" setting is selected under "Footer Widget Areas" in "Theme Options".
+ 							   - Added more options for navigation item (text, bg, hover, current, dropdown borders)
+ * /includes/theme-js.php - Added responsive layout width generator as a registered style.
+ * header.php - Removed call to "generator.php" CSS generator in favour of adding it in the /includes/theme-js.php file.
+
+2012.06.04 - version 5.0.0
+ * /includes/theme-options.php - Commented out "ContainerClick" theme option for sliders, as Flexslider doesn't support this.
+ * /includes/theme-actions.php - Made sure that both the "Business" and "Magazine" sliders make use of WP_Query instead of query_posts().
+ * /includes/theme-actions.php - Adjust HTML output of the sliders to work with Flexslider.
+ * /includes/theme-actions.php - Make sure the images are sized at the width set for the layout under "Theme Options".
+ * /includes/theme-actions.php - Replace SlidesJS JavaScript setup with Flexslider JavaScript setup.
+ * /includes/woo-layout/classes/woo-layout.class.php - Convert Layout Manager to work better with percentages, instead of pixel values (5% removed from main column for various multi-column layouts, to add visual continuity).
+ * /includes/woo-layout/assets/js/functions.js - Optimise admin interface JavaScript to work better with percentage values.
+ * /includes/js/jquery.flexslider.min.js - ADDED
+ * /includes/fonts/ - ADDED (WebSymbols font face for icons)
+ * /includes/css/generator.php - Added to dynamically set the main #wrapper width (and that the responsive JavaScript files can recognise the value).
+ * /includes/css/layout.css - ADDED - Layout-related and responsive CSS.
+ * /css/generator.php - Generates CSS file for custom site width media query
+ * style.css - Converted layout to be responsive; Default styling updates
+ * template-timeline.php - ADDED - Timeline page template
+ * template-contact.php - Updated contact page template with new options & map
+ * images/
+ 		/ico-social-facebook.png - REMOVED - Replaced with @font-face icon
+		/ico-social-flickr.png - REMOVED - Replaced with @font-face icon
+		/ico-social-delicious.png - REMOVED - Replaced with @font-face icon
+		/ico-social-linkedin.png - REMOVED - Replaced with @font-face icon
+		/ico-social-rss.png - REMOVED - Replaced with @font-face icon
+		/ico-social-youtube.png - REMOVED - Replaced with @font-face icon
+		/ico-social-googleplus.png - REMOVED - Replaced with @font-face icon
+		/ico-social-twitter.png - REMOVED - Replaced with @font-face icon
+		/ico-post-icons.png - REMOVED - Replaced with @font-face icon
+		/blockquote.png - REMOVED - Replaced with @font-face icon
+
+		/ico-subscribe-social.png - ADDED - Using sprite for subscribe icons, instead of individual images.
+
+
+2012.04.23 - version 4.7.11
+ * /includes/woo-layout/classes/woo-layout.class.php - Refine the URL used to load the Layout Manager's dynamically generated CSS code.
+ * /includes/theme-actions.php - Add context of "datetime" to the translation of "on" in the woo_post_meta() function.
+ * /includes/widgets/widget-woo-tabs.php - Add context of "topic" to the translation of "on" in the woo_widget_tabs_comments() function.
+ * /lang/en_GB.po - Rescanned the language file.
+
+2012.04.11 - version 4.7.10
+ * /includes/theme-function.php - Changes Category Archive Title to h1
+ * /includes/theme-actions.php - Adjusted Archive Header options
+
+2012.02.07 - version 4.7.9
+ * /includes/theme-options.php - Optimise theme options list, adding subheadings where contextually appropriate.
+
+2012.02.02 - version 4.7.8
+ * /includes/woo-layout/classes/woo-layout.class.php - Make sure the dynamic CSS URL recognises when a parameter is already there (filtered onto the URL within WordPress), and uses & instead of ? as the separator.
+ * /includes/js/feedback.js - Add variable speed logic to each feedback fader.
+ * /includes/widgets/widget-woo-feedback.php - Add variable speed controls to each feedback widget.
+ * /includes/theme-actions.php - Fix bug in "Business" slider custom typography setting on slide title.
+
+2012.01.24 - version 4.7.7
+ * loop-search.php - changed to use content-search.php
+ * content-search.php - new file to output only excerpt and linkable post titles on search
+ * includes/gallery.php,
+   includes/theme-functions.php - tweaked lightbox grouping with single image
+
+2012.01.19 - version 4.7.6
+ * /includes/js/jquery.prettyPhoto.js - Upgrade to prettyPhoto V3.1.3.
+ * /includes/css/prettyPhoto.css - Upgrade to prettyPhoto V3.1.3.
+
+2012.01.16 - version 4.7.5
+ * header.php - removed comment reply js (already in framework)
+ * single-portfolio.php, includes/gallery.php - added noheight=true to fix height of image in IE
+
+2012.01.03 - version 4.7.4
+ * /includes/theme-actions.php - Add support for WooCommerce "Shop" landing page to retrieve the correct CSS class on the body tag.
+ * /includes/theme-options.php - Add missing "woothemes" textdomain to the description string for "_woo_slider_notice".
+
+2011.12.25 - version 4.7.3
+ * style.css - changed slider title from '#loopedSlider .content h2 a' to '#loopedSlider .content h2' so it works with biz slider without an URL
+
+2011.12.15 - version 4.7.2
+ * content-page.php - Show excerpt on archive screens and full content on single page screens.
+
+2011.12.11 - version 4.7.1
+ * /includes/gallery.php - Revert portfolio gallery file to previous revision- fixes lightbox.
+
+2011.12.06 - version 4.7.0
+ * /includes/theme-options.php - Added theme options to set the limit of posts to display on the "Magazine" template, as well as whether the portfolio items link to the lightbox or the single portfolio item screen. Added theme option to adjust the width of WooTumblog media when in the "Magazine" template's grid section. Added "woothemes" textdomain to the "Enable Tumblog Functionality In Canvas" description field. Added content/excerpt toggle options for the "featured" and "grid" sections of the "Magazine" page template.
+ * /includes/theme-actions.php - Added logic to change the width of WooTumblog media when the tumblog post is in the "Magazine" template's grid section.
+ * /includes/theme-functions.php - Added "woothemes" textdomain to "Primary Menu" menu title and to the taxonomy archive title text in the woo_archive_title() function.
+ * /includes/theme-shortcodes.php - Added "woothemes" textdomain to [post_author_link] shortcode's output.
+ * /includes/tumblog/theme-custom-post-types.php - Added "woothemes" textdomain to "View All Tumblogs" and "Filter" strings.
+ * /includes/tumblog/wootumblog_postformat.class.php - Added "woothemes" textdomain to "View All Tumblogs" and "Filter" strings.
+ * loop-magazine.php - Added logic to limit the posts displayed in the "Magazine" loop, based on a newly added theme option under the "Magazine Template" section of "Theme Options".
+ * loop-portfolio.php - Add logic for the theme option to determine whether the portfolio item thumbnails link to the single portfolio item screen, or to the lightbox.
+ * content-magazine-featured.php - Added logic for content/excerpt toggle via theme option.
+ * content-magazine-grid.php - Added logic for content/excerpt toggle via theme option.
+
+2011.11.30 - version 4.6.11
+ * /includes/theme-actions.php - Make sure the "slide height on first slide" logic doesn't apply if autoHeight is off.
+
+2011.11.18 - version 4.6.10
+ * header.php, content-page.php - fixed headings when static page is set as front page
+ * includes/theme-actions.php - changed business slides with image background to not link the title if no custom url is set.
+
+2011.10.27 - version 4.6.9
+ * header.php - fixed site title not showing hidden with custom logo
+
+2011.10.21 - version 4.6.8
+ * template-biz.php,
+   content-page-template-business.php - changed template part name to content-page-template-business.php to avoid it being used when page slug is business
+
+2011.10.13 - version 4.6.7
+ * includes/widgets/widget-woo-twitter.php made Twitter http requests secure for use with WooCommerce
+
+2011.10.10 - version 4.6.6
+ * /includes/widgets/widget-woo-tabs.php - Improved WPML support in the Woo - Tabs widget.
+ * /includes/theme-actions.php - Fixed logic around slider effect (fade is now supported on the "Business" slider).
+ * loop-blog.php - Remove homepage category exclude filter on the "Blog" page template, to resolve conflict between homepage category exclude and "Blog" template category exclude theme options.
+
+2011.09.30 - version 4.6.5
+ * /includes/theme-functions.php - Removed deprecated woo_tabs_popular(), woo_tabs_latest() and woo_tabs_comments() functions, with notes to see the /includes/widgets/widget-woo-tabs.php file.
+ * /includes/theme-options.php - Fixed spelling mistake in the "Automatic Thumbnails" theme option's description text.
+ * comments.php - Fixed logic to make sure that trackbacks can display when no comments have been made and only trackbacks are present.
+
+2011.09.26 - version 4.6.4
+ * style.css - IE7 feedback widget "hasLayout" fix
+
+2011.09.22 - version 4.6.3
+ * /includes/theme-functions.php - Removed logic for legacy "Enable Portfolio" theme option.
+ * /includes/theme-options.php - Removed legacy "Enable Portfolio" theme option.
+ * /lang/en_GB.po - Rescanned language file.
+
+2011.09.14 - version 4.6.2
+ * /includes/gallery.php - Make sure the portfolio gallery slider is the same height as the first slide image on load.
+ * /includes/theme-comments.php - Replace "commenter email" with the "comment" object in the_commenter_avatar().
+
+2011.09.13 - version 4.6.1
+ * loop-magazine.php - Replaced "category__not_in" with "cat" to make sure categories are excluded correctly.
+ * /includes/theme-actions.php - Make sure the "auto" and "speed" values are translated to the slider JavaScript correctly. Hide the next/previous buttons if only a single slide is available.
+ * /includes/js/feedback.js - Make sure the height of the feedback fader container is the same as the height of the first feedback item on load.
+ * /includes/tumblog/theme-tumblog.php - Make sure audio file is detected correctly in tumblog "audio" posts ( woo_tumblog_audio_content() ).
+
+2011.09.05 - version 4.6.0
+ * /includes/theme-actions.php - Added option for slider to display a single slide.
+ * /includes/theme-options.php - Added "1" to the numbering array used in slide display limit theme options. Added category exclude on home and category exclude on "Blog" page template theme options. Add theme option to enable prettyPhoto lightbox on all links that link to images.
+ * /includes/gallery.php - Make sure the slider is the same height as the first slide on load of the portfolio gallery.
+ * /includes/theme-comments.php - Optimised the_commenter_avatar() function, removing code that is no longer required for adding Microformat CSS classes.
+ * /includes/theme-functions.php - Added filters for excluding categories on the homepage and "Blog" page template, via theme options.
+ * /includes/theme-js.php - Moved general.js enqueue to the end of the function, to make sure all necessary logic has happened before general.js is enqueued.
+ * /includes/js/general.js - Added toggle to enable prettyPhoto lightbox, if theme option to enable it is active (which adds the "has-lightbox" CSS class to the body tag).
+ * loop-blog.php - Added filter to exclude categories from the "Blog" page template via theme options.
+
+2011.08.30 - version 4.5.1
+ * style.css - removed absolute positioning from tumblog icon and added float:right; (line 423)
+
+2011.08.18 - version 4.5.0
+ * /includes/theme-actions.php - Added dynamic tabindex to comment form textarea.
+ * /includes/images/feedback.png - Testimonials admin icon.
+ * /includes/widgets/widget-woo-feedback.php - Widget to display posts for the "feedback" post type.
+ * /includes/theme-widgets.php - Add Feedback widget.
+ * /includes/js/feedback.js - Feedback JavaScript.
+ * /includes/theme-js.php - Added conditional loading of Feedback JavaScript.
+ * /includes/theme-functions.php - Added "Feedback" custom post type and functionality.
+ * loop-blog.php,
+   loop-magazine.php,
+   loop-portfolio.php,
+   loop-search.php,
+   loop-tumblog.php,
+   loop.php - Added global $more; $more = 0; to ensure that the "more" links display and function correctly.
+ * loop-portfolio.php - Added filter ( woo_portfolio_gallery_exclude ) to the galleries to exclude string.
+
+2011.08.11 - version 4.4.8
+ * /includes/woo-hooks/classes/woo-hooks.class.php - Added woo_nav_inside() hook to the Hook Manager.
+ * /includes/woo-layout/classes/woo-layout.class.php - Resolved array_key_exists() errors generated in PHP error log.
+ * /includes/theme-actions.php - Moved e-mail/RSS subscription links in navigation to their own function, now added via the woo_nav_inside() hook at priority 10. Set all actions to load at priority 10.
+
+2011.08.10 - version 4.4.7
+ * style.css - Added styling to float single portfolio item description correctly to the right.
+ * /includes/theme-js.php - Make sure SlidesJS loads correctly for portfolio items.
+
+2011.08.09 - version 4.4.6
+ * footer.php - Added ".fix" DIV below "#wrapper" to fix margin-bottom on Boxed Layout.
+ * /includes/woo-hooks/woo-hooks.php - Bumped to V1.1.0 along with new hooks added.
+ * /includes/woo-hooks/classes/woo-hooks.class.php - Added "woo_nav_before" and "woo_nav_after" hooks.
+ * /includes/woo-hooks/screens/admin.php - Added logic to use hook_titles array for custom navigation section titles.
+ * /includes/theme-actions.php - Made sure woo_layout_bodyclass defaults to "layout" theme option if no layout is set for a post/page.
+ * functions.php - Updated to use the locate_template() function for included files, to enable overriding of files via child themes.
+ * loop.php - Further standardised the fallback loop file.
+
+2011.07.25 - version 4.4.5
+ * /includes/tumblog/theme-tumblog.php - Fixed the RSS output for tumblog items in function woo_custom_tumblog_rss_output().
+
+2011.07.23 - version 4.4.4
+ * /includes/gallery.php - Don't display the gallery thumbnails if only a single image, and the gallery has still be enabled.
+ * /includes/theme-options.php - Added theme options to disable portfolio and slides admin menus.
+ * /includes/theme-functions.php - Added logic for theme options to disable portfolio and slides admin menus.
+
+2011.07.22 - version 4.4.3
+ * includes/theme-actions.php - made some functions pluggable for child theme usage
+
+2011.07.19 - version 4.4.2
+ * /includes/theme-functions.php - Resolved PHP notice message in portfolio item settings function if no terms are set for the item.
+
+2011.07.15 - version 4.4.1
+ * /includes/theme-functions.php,
+   /includes/gallery.php - Resolved PHP notice messages on portfolio screens.
+
+2011.07.13 - version 4.4.0
+ * /includes/images/portfolio.png - Added "portfolio" post type menu icon.
+ * /images/ico-gallery-prev.png,
+ * /images/ico-gallery-next.png,
+ * /images/portfolio-hover.png - Portfolio-related images.
+ * /includes/images/prettyPhoto - Added prettyPhoto images.
+ * /includes/js/portfolio.js - Portfolio component JavaScript.
+ * /includes/js/jquery.prettyPhoto.js - PrettyPhoto JavaScript for Portfolio component.
+ * /includes/js/jquery.jcarousel.min.js - jCarousel for use on portfolio items with a gallery.
+ * /includes/gallery.php - Gallery used on portfolio items where the gallery is enabled.
+ * /includes/css/prettyPhoto.css - PrettyPhoto CSS styling.
+ * /includes/theme-actions.php - Added logic to add body class for portfolio gallery items using theme option.
+ * /includes/theme-advanced.php - Added logic to template part locator, to display content-archive-*.php files on search results.
+ * /includes/theme-functions.php - Added portfolio-related functionality and filters on post_more and post_meta for portfolio items.
+ * /includes/theme-options.php - Added portfolio-related theme options.
+ * /includes/theme-js.php - Added portfolio-related JavaScript and CSS enqueues and loading logic.
+ * template-portfolio.php - Portfolio page template.
+ * archive-portfolio.php - "Portfolio" post type archive template.
+ * loop-portfolio.php - Loop logic for the Portfolio page template.
+ * single-portfolio.php - Single portfolio item detail template.
+ * taxonomy-portfolio-gallery.php - Page template for portfolio gallery terms.
+ * content-archive-portfolio.php - Archive/Search content template for portfolio items.
+ * style.css - Added portfolio-related CSS.
+ * sidebar.php - Cater for various post type archive layouts for portfolio.
+
+2011.07.12 - version 4.3.1
+ * content-post.php - removed post thumbnail if showing the full content
+
+2011.07.06 - version 4.3.0
+ * /includes/theme-functions.php - Added "slide-page" taxonomy and assigned it to the "slide" post type.
+ * /includes/theme-options.php - Added "Slide Page" selection custom field to the "Page" "edit" and "add" screens.
+ * /includes/theme-actions.php - Updated "Business" slider to use a "Slide Page", if one has been specified.
+ * /includes/theme-js.php - Added admin JavaScript file to toggle the "Slide Page" selection field depending on the page template used.
+ * /includes/js/meta-options-custom-toggle.js - Custom JavaScript to toggle the "Slide Page" field, depending on the page template selected.
+
+2011.07.05 - version 4.2.2
+ * style.css - added .nav li.sfHover ul li a.sf-with-ul styling
+
+2011.07.03 - version 4.2.1
+ * /includes/theme-functions.php - Added calls to global $paged variable to ensure correct next/previous links when using custom queries.
+ * loop-magazine.php - Set $paged variable as global to ensure it can be seen by the woo_pagenav() function.
+
+2011.06.30 - version 4.2.0
+ * /includes/theme-advanced.php - Added content-single and content-archive options to the content template engine. See WooCodex for updated documentation.
+
+2011.06.30 - version 4.1.9
+ * includes/theme-actions.php - fixed woo_display_post_image to not show on single posts if video is shown
+ * template-contact.php - Fix MIME header display issue and body encoding issue by simplifying e-mail header data.
+
+2011.06.28 - version 4.1.8
+* /includes/tumblog/wootumblog_postformat.class.php - Added fix for bulk editing of posts
+* /includes/tumblog/theme-custom-post-types.php - Added fix for bulk editing of posts
+
+2011.06.27 - version 4.1.7
+ * /includes/theme-actions.php - Removed child theme constants logic (moved to the child theme link shortcode).
+ * /includes/theme-shortcodes.php - Added and refined child theme logic from theme-actions.php.
+ * /includes/theme-actions.php - fixed a width bug with magazine/biz template slider where a different layout was selected on page options
+
+2011.06.24 - version 4.1.6
+ * /includes/theme-options.php - Added "Hover Pause" to slider settings.
+ * /includes/theme-actions.php - Added "Hover Pause" to slider settings.
+
+2011.06.19 - version 4.1.5
+ * template-contact.php - Updated translation strings in Contact Form page template.
+ * /lang/en_GB.po - Rescanned language file.
+
+2011.06.13 - version 4.1.4
+ * /includes/theme-shortcodes.php - Removed "rel" attribute from categories in [post_categories] shortcode, to fix HTML validation.
+ * header.php - Removed "profile" link tag, to fix HTML validation.
+ * search-form.php - Added "alt" text to the search image button.
+ * loop-magazine.php - Make sure posts are only excluded if the theme option is set to do so.
+
+2011.06.10 - version 4.1.3
+ * template-contact.php - Fixed translation strings in the e-mail message.
+ * /lang/en_GB.po - Rescanned language file.
+ * comments.php - moved div container inside conditional statement
+
+2011.06.04 - version 4.1.2
+ * /includes/theme-actions.php - Setup comment form labels for translation.
+ * content-tumblog.php - Display full content on single post screen.
+ * /lang/en_GB.po - Rescanned language file.
+ * content-post.php - Added condition to change heading to h2 when not on single post screen.
+
+2011.05.30 - version 4.1.1
+ * /lang/en_GB.po - Rescanned language file.
+ * /includes/tumblog/theme-tumblog.php - Changed "video" CSS class to "video-wrap" on WooTumblog video posts wrapping DIV tag.
+ * content-post.php, content.php - Updated title to have no hyperlink if on the post itself.
+ * /includes/theme-actions.php - Added support for navigation hover colour to BuddyPress navigation menu items (using the BuddyPress "selected" CSS class). Added support for new "Current Menu Item Color" theme option.
+ * /includes/theme-options.php - Added "Current Menu Item Color" theme option.
+ * /includes/widgets/widget-woo-adspace.php,
+   /includes/widgets/widget-woo-blogauthor.php,
+   /includes/widgets/widget-woo-embed.php,
+   /includes/widgets/widget-woo-flickr.php,
+   /includes/widgets/widget-woo-search.php,
+   /includes/widgets/widget-woo-subscribe.php,
+   /includes/widgets/widget-woo-tabs.php,
+   /includes/widgets/widget-woo-twitter.php - Removed array_fill_keys() function, to get widgets working on pre-PHP 5.2.0 installations.
+
+2011.05.26 - version 4.1
+ * header.php - set head to HTML5
+ * includes/theme-js.php - removed suckerfish.js and moved to general.js
+ * includes/js/general.js - added suckerfish js here
+ * includes/widgets/widget-woo-adspace.php - removed esc_html on adcode so it can be outputted.
+ * style.css - added display:none to #loopedslider .slides
+ * includes/theme-actions.php - fixed slider height in magazine template
+ * style.css - fixed hover color
+
+2011.05.25 - version 4.0.9
+ * includes/theme-actions.php - fixed with of slider images
+
+2011.05.25 - version 4.0.8
+ * includes/woo-layout.php,
+   includes/woo-hooks.php,
+   includes/woo-meta.php - fixed loading to work on Windows based servers
+
+2011.05.22 - version 4.0.7
+ * comments.php - fixed comments are closed message on pages
+ * content-business.php - commented out comments on business page template
+ * includes/theme-options.php - added some extra info boxes in options panel.
+ * includes/theme-actions.php - fixed magazine template slider width when layout manager disabled
+
+2011.05.18 - version 4.0.6
+ * sidebar.php - fixed bug with sidebar showing on full width selected pages/posts
+ * includes/woo-layout/classes/woo-layout.class.php - fixed business page template width issues, added option to disable layout manager CSS
+ * includes/woo-layout/screens/admin.php - added option to disable layout manager CSS
+ * includes/theme-actions.php - fixed magazine slider issue when set to full width (one-col) on page. Fixed biz slider issue with wrong content. Fixed Autoheight on slider.
+ * style.css - adjusted biz slider min-height (line 804-805).
+ * /includes/widgets/widget-woo-embed.php - fixed js output issue
+ * /woo-layout/screens/admin.php, /woo-layout/classes/woo-layout.class.php - Made the Layout Manager disabled by default. Added option to enable it.
+ * includes/theme-shortcodes.php - categories meta shortcode remove "POSTED IN:" default text
+
+2011.05.17 - version 4.0.5
+ * header.php - added additional checking on array values
+ * content-business.php - added global woo_options
+ * content-magazine-featured.php - added additional checking for widths and heights
+ * content-magazine-grid.php - added additional checking for widths and heights
+ * sidebar.php - fixed call to woo_options
+ * /includes/theme-actions.php - styling and slider fixes for magazine and business. fixes bug where shortcodes would not output in business slider.
+ * /includes/theme-options.php - moved settings for layout manager back into theme options panel
+ * /includes/widgets/widget-woo-flickr.php - bugfix for save instance
+ * /includes/woo-layout/assets/css/interface.css - additional styling for info boxes
+ * /includes/woo-layout/screens/admin.php - output fixes and additional error checking
+ * /includes/theme-actions.php - added preloading image to slider
+ * images/loading.png - preloader image for slider
+
+2011.05.15 - version 4.0.4
+ * includes/woo-layout/classes/woo-layout.class.php - Adjusted dynamic CSS to pull default values on first use or if reset, and adjusted widths and CSS for Magazine template slider.
+ * includes/theme-actions.php - fixed option for biz slider to show oldest/newest post first.
+
+2011.05.12 - version 4.0.3
+ * includes/woo-hooks.php,
+   includes/woo-meta.php,
+   includes/woo-layout.php - changed get_stylesheet_directory to get_template_directory so options work when using child themes.
+
+2011.05.12 - version 4.0.2
+ * content-business.php - removed comments template if not active on pages
+ * includes/theme-actions.php - added stripslashes to footer content option output
+
+2011.05.11 - version 4.0.1
+ * /includes/theme-advanced.php - Re-ordered woo_get_template_part() to check for content-tumblog prior to content-post. Fixes tumblog display issue.
+ * /includes/theme-actions.php - Fixed logic where featured image was displaying on pages.
+ * loop-magazine.php - fixed exclude category option
+ * content-post.php - added back woo_image so thumbnails show
+ * content-tumblog.php - removed woo_image so thumbnails don't show
+ * /includes/woo-hooks/classes/woo-hooks.class.php - allow shortcode parameters in hook manager
+
+2011.05.06 - version 4.0.0
+ * Version bump.
+ * Upgraded all template files to use new template->loop->content convention.
+ * /includes/theme-shortcodes.php - New shortcodes for primary use with the Meta Manager.
+ * /includes/theme-advanced.php - New templating engine.
+ * /includes/woo-hooks - Hook Manager.
+ * /includes/woo-meta - Meta Manager.
+ * /includes/woo-layout - Layout Manager.
+ * includes/theme-actions.php - removed woo_IE_head()
+ * style.css - added section #0 RESET and #9 BROWSER SPECIFIC. Removed include of reset.css.
+
+2011.04.16 - version 3.4.13
+ * includes/theme-functions.php - added stripslashes to comments tabs widget and subscribe & connect
+
+2011.04.06 - version 3.4.12
+ * style.css - Added CSS for slider pagination.
+ * /includes/theme-actions.php - Added option to toggle slider pagination.
+ * /includes/theme-js.php - Added modification to register slider JavaScript globally, but only load it where needed.
+ * /includes/theme-options.php - Added option to toggle slider pagination.
+
+2011.04.05 - version 3.4.11
+ * style.css - Added z-index to "next" and "previous" buttons in Magazine template's slider.
+ * /includes/theme-actions.php - Changed LoopedSlider setup work with SlidesJS.
+ * /includes/theme-js.php - Included SlidesJS script and removed LoopedSlider script.
+ * /includes/js/slides.min.jquery.js - Added SlidesJS JavaScript.
+ * /includes/theme-options.php - Added option to change the slider effect, between "slide" and "fade".
+
+2011.04.04 - version 3.4.10
+ * includes/theme-actions.php - Display "comments are closed" text in woo_post_more() if comments are closed on a post. Added filter around the text for child themes/plugins to customise the text.
+
+2011.03.03 - version 3.4.9
+ * includes/theme-actions.php - fixed font output bug
+
+2011.03.01 - version 3.4.8
+ * comments.php - fixed required text in comments form to not show if not required.
+ * template-fullwidth.php, template-redirect.php - Removed as these are redundant
+
+2011.02.28 - version 3.4.7
+ * /includes/tumblog/theme-tumblog.php - fixed post meta data for post formats
+
+2011.02.26 - version 3.4.6
+ * style.css - added .woo-pagination styling (section 3.3). Changed #breadcrumbs to .breadcrumbs
+
+2011.02.25 - version 3.4.5
+ * template-biz.php - added "missing" secondary sidebar
+
+2011.02.24 - version 3.4.2
+ * /includes/theme-actions.php - Added support for activating/deactivating the woo_breadcrumbs() functionality via "Theme Options".
+ * /includes/theme-options.php - Added theme options for controlling the woo_pagination() and toggling woo_breadcrumbs().
+ * /includes/theme-functions.php - Added support for woo_pagination() (default) and toggle logic to switch to the "next" and "previous" links.
+ * /includes/tumblog/* - upgraded tumblog to use post formats
+ * functions.php - upgraded tumblog to use post formats
+
+2011.02.23 - version 3.4.1
+ * includes/theme-options.php - removed duplicate woo_metaboxes_add()
+
+2011.02.17 - version 3.4
+ * style.css - added CSS for optional top navigation (WP Menus) section 2.2.2
+ * includes/theme-actions.php,
+   includes/theme-options.php,
+   includes/theme-functions.php - added function/options/menu for optional top navigation (WP Menus)
+ * template-biz.php - removed duplicate sidebar container
+
+2011.02.14 - version 3.3.5
+ * includes/theme-functions.php, lang/en_GB.po - added missing 'Subscribe to our RSS feed' to po file
+
+2011.02.11 - version 3.3.4
+ * template-fullwidth.php - added comment code (line 37)
+
+2011.01.31 - version 3.3.3
+ * includes/theme-functions.php - added new widget settings for subscribe & connect
+ * includes/widgets/woo-widget-subscribe.php - added new widget settings for subscribe & connect
+
+2011.01.29 - version 3.3.2
+ * includes/theme-functions.php - added option to change text and title in subscribe & connect
+ * includes/theme-options.php - added option to change text and title in subscribe & connect
+
+2011.01.28 - version 3.3.1
+ * includes/theme-functions.php - changed get_stylesheet_directory_uri to get_template_directory_uri so subscribe & connect social icons work with child themes
+
+2011.01.28 - version 3.3
+ * style.css - added styling for Subscribe & Connect. Added margin to #post-author.
+ * includes/theme-functions.php - added woo_subscribe_connect()
+ * includes/theme-actions.php - added woo_subscribe_connect_action(). Fixed bug with biz slider font face.
+ * images/ico-social-*.png - Subscribe & Connect icons
+ * includes/widgets/woo-widget-subscribe.php - Subscribe & Connect widget.
+ * includes/theme-widgets.php - Subscribe & Connect widget.
+
+2011.01.14 - version 3.2.8
+ * includes/theme-functions.php - included WP thumbnail in slider post type.
+
+2011.01.03 - version 3.2.7
+ * css/ie7.css - Fixed comment reply styling bug
+
+2010.12.29 - version 3.2.6
+ * includes/theme-actions.php - fixed output of custom styling to work without alt stylesheet option
+
+2010.12.29 - version 3.2.5
+ * includes/theme-options.php - commented out Alt Stylesheet option since users can't use custom options with alt styles and not get the full potential of Canvas.
+
+2010.11.25 - version 3.2.4
+ * includes/theme-actions.php - added author box to author archive. changed add action for author box
+ * style.css - added .author #post-author
+
+2010.11.22 - version 3.2.3
+ * style.css - added active hover for categories on .nav (line 141)
+
+2010.11.21 - version 3.2.2
+ * includes/theme-functions.php - excluded sticky posts from the WooTabs popular and latest queries
+
+2010.11.12 - version 3.2.1
+ * includes/theme-functions.php - fixed bug with saving custom field images
+
+2010.11.10 - version 3.2
+ * /functions/ - Framework update to 3.2.01
+ * includes/theme-options.php - updates to styling of options
+
+2010.11.08 - version 3.1.4
+ * includes/widgets/widget-woo-tabs.php - Updated widget again
+ * includes/theme-js.php - removed loading of wootabs.js in header
+ * includes/js/wootabs.js - removed file
+
+2010.11.08 - version 3.1.3
+ * includes/widgets/widget-woo-tabs.php - Added sort options to WooTabs
+
+2010.11.08 - version 3.1.2
+ * /functions/ - Framework update to 3.1.10
+ * includes/theme-options.php - added option to dynamically resize WP post thumbnails (Dynamic Images)
+
+2010.11.03 - version 3.1.1
+ * includes/theme-options.php - added excerpt/content select option in General Settings. Removed from Layout.
+ * includes/theme-actions.php -  modified post_more()
+ * archive.php, taxonomy-tumblog.php, template-blog.php, index.php - modified post content output
+ * search-form.php - updated search input (removed button)
+ * style.css - updated SEARCH FORM section
+ * images/ico-search.png - new search input button
+
+2010.11.03 - version 3.1
+ * style.css - made style chages to section 3.3 and 3.4 (post navigation and post author)
+ * includes/theme-actions.php - changed post nav, post author, theme styling output
+ * includes/theme-options.php - added options to style post author box
+ * includes/theme-functions.php - fixed post/page nav functions
+ * single.php - removed woo_postnav (added in theme-actions.php)
+
+2010.11.03 - version 3.0.8
+ * includes/theme-comments.php - made functions pluggable
+
+2010.11.02 - version 3.0.7
+ * includes/theme-options.php - added option to exclude sliders posts in magazine template from normal posts
+ * template-magazine.php - added option conditional (line 25)
+
+2010.10.29 - version 3.0.6
+ * /lang/canvas.po - updated lang file
+ * archive.php - added missing string
+
+2010.10.28 - version 3.0.5
+ * includes/theme-options.php - added option to remove post-more. Added Archive Header styling.
+ * includes/theme-actions.php - added Archive Header styling output. Added UNIT option (px/em) to all typography outputs.
+
+2010.10.27 - version 3.0.4
+ * footer.php - fixed footer left/right output bug
+
+2010.10.27 - version 3.0.3
+ * TUMBLOG STRUCTURE OPTIMIZATION
+ * functions.php - changed path on tumblog includes to includes/tumblog/ folder
+ * includes/player.swf - moved to includes/tumblog/
+ * includes/stylish_slim.swf - moved to includes/tumblog/
+ * includes/swfobject.js.swf - moved to includes/tumblog/
+ * includes/theme-custom-post-types.php - moved to includes/tumblog/
+ * includes/theme-tumblog.php - moved to includes/tumblog/
+ * header.php - removed load of swfobject.js (loaded in theme-tumblog.php)
+
+2010.10.27 - version 3.0.2
+ * /functions/ - Framework update to 3.1.2
+ * includes/theme-options.php - Added/improved options.
+ * includes/theme-actions.php - Added optional parameters to biz slider query.
+ * includes/theme-functions.php - Added optional post meta to woo_post_meta()
+ * footer.php - fixed custom footer code
+ * /css/effects.css - moved css to style.css and removed file
+ * header.php - removed load of css/effects.css
+ * includes/widgets/widgets-woo-twitter.php - added basic styling
+ * style.css - added basic styling to .widget_woo_twitter (TWITTER WIDGET)
+ * thumb.php - updated to latest version with crop alignment
+
+2010.10.27 - version 3.0.1
+ * /includes/theme-options.php - added tumblog metaboxes to add post UI
+
+2010.10.22 - version 3.0
+ * /functions/ - Framework update to 3.1.0
+ * includes/theme-options.php - Added icons to option headings
+ * TUMBLOG FUNCTIONALITY
+ * archive.php - added tumblog output functions
+ * function.php - added tumblog functionality
+ * header.php - added tumblog audio player script
+ * index.php - added tumblog output functions
+ * search.php - added tumblog output functions
+ * single.php - added tumblog output functions
+ * style.css - added tumblog frontend styles
+ * /includes/theme-actions.php - modified output functions including tumblog functionality
+ * /includes/theme-options.php - added tumblog theme options
+ * /includes/theme-custom-post-types - added tumblog custom post type
+ * /includes/theme-tumblog.php - added tumblog output functions
+ * taxonomy-tumblog.php - added tumblog archive page
+ * /lang/canvas.po - updated lang file
+
+2010.10.21 - version 2.9.2
+ * template-biz.php - fixed sidebar position in code
+
+2010.10.20 - version 2.9.1
+ * includes/theme-options.php - fix bug with missing Custom Settings panel on pages (layout option)
+
+2010.10.20 - version 2.9
+ * /functions/ - FRAMEWORK UPDATE NEEDED -> 3.0.12
+ * includes/theme-options.php - added unit selection (px/em) to typography options
+ * includes/theme-actions.php - fixed options output to support em
+
+2010.10.19 - version 2.8.3
+ * includes/theme-options.php - fixed position of function to add options through child theme
+
+2010.10.19 - version 2.8.2
+ * includes/theme-options.php - fixed bug in options not showing up
+ * includes/sidebar-init - set a default number of footer sidebars if options not set
+ * includes/footer.php - set a default number of footer sidebars if options not set
+
+2010.10.18 - version 2.8.1
+ * template-biz.php - added missing sidebar. Use sidebar manager to add unique biz sidebar.
+
+2010.10.13 - version 2.8
+ * includes/sidebar-init.php - Added option for 1-4 widget areas in the footer
+ * footer.php - Added option for 1-4 widget areas in the footer
+ * style.css - Added section 8.4
+ * includes/theme-options.php - Added option to Layout for selecting 1-4 footer widget areas
+ * CUSTOM POST TYPE: SLIDES (BUSINESS SLIDER)
+ * includes/theme-functions.php - added custom post type slide
+ * includes/images/slide.png - image for new custom post type
+ * includes/theme-options.php - fixed Custom Settings for new post type. Fixed options.
+ * includes/theme-actions.php - fixed query in business slider function
+
+2010.10.05 - version 2.7.1
+ * 404.php - add the word "are" in error message (line 24)
+
+2010.09.28 - version 2.7.0
+ * functions/*.* - Framework update 3.0.00 for Sidebar Manager
+ * includes/sidebar-init.php - Corrected faulty string input for functions params.
+ * includes/theme-actions.php - Corrected faulty string input for functions params.
+ * includes/theme-functions.php - Corrected faulty string input for functions params.
+ * includes/theme-options.php - Corrected faulty string input for functions params.
+ * sidebar.php, sidebar-alt.php, template-biz.php, footer.php - Converted WordPress functions into SBM functions.
+
+2010.09.14 - version 2.6.3
+ * style.css - removed position:relative from .post .title, .page .title (line 208)
+
+2010.08.30 - version 2.6.2
+ * page.php - added wp_link_pages()
+ * single.php - added wp_link_pages()
+
+2010.08.18 - version 2.6.1
+ * Added woo_loop_before to all template files
+ * includes/theme-actions.php - hooked Yoast Breadcrumbs on woo_loop_before
+
+2010.08.18 - version 2.6.0
+ * search.php - show the excerpt instead of the content. Added thumbnails to posts.
+ * includes/theme-actions.php - added function woo_breadcrumbs to add Yoast Breadcrumb support: http://yoast.com/wordpress/breadcrumbs/
+ * style.css - added .breadcrumb styling
+
+2010.08.11 - version 2.5.3
+ * includes/theme-functions.php - added edit link to woo_post_meta()
+ * single.php - fixed missing woo_post_meta()
+ * template-magazine.php - fixed missing woo_post_meta()
+
+2010.08.06 - version 2.5.2
+ * includes/theme-functions.php - Added woo_post_meta()
+ * index.php - changed post meta to use woo_post_meta()
+ * archive.php - changed post meta to use woo_post_meta()
+ * single.php - changed post meta to use woo_post_meta()
+ * search.php - changed post meta to use woo_post_meta()
+ * template-magazine.php - changed post meta to use woo_post_meta()
+ * template-blog.php - changed post meta to use woo_post_meta()
+
+2010.08.02 - version 2.5.1
+ * includes/theme-actions.php - Added loading of Google Fonts (add_action('wp_head', 'woo_google_webfonts');)
+ * /functions/ - Update to 2.8.09 - removed loading of Google Fonts from framework
+
+2010.08.01 - version 2.5
+ * /functions/ - Framework Update - Added support for Google Fonts. Use "Update Framework" in your dashboard or update this folder.
+
+2010.07.21 - version 2.4
+ * style.css - Added 1200px width (section #7)
+ * includes/theme-actions.php - Added 1200px width. Moved add_actions to top for better overview.
+ * includes/theme-options.php - Added 1200px width
+
+2010.07.17 - version 2.3.2
+ * includes/theme-functions.php - Fixed bug with latest posts tab not showing
+
+2010.07.15 - version 2.3.1
+ * includes/theme-widgets.php - Fixed bug with theme previewing
+
+2010.07.09 - version 2.3
+ * includes/theme-actions.php - Added function for single post author
+ * style.css - added section 3.4 Single Blog Author
+ * includes/theme-options.php - added option to disable Single Blog Author in Post Styling
+ * includes/theme-actions.php - made functions pluggable
+ * includes/theme-functions.php - made functions pluggable
+ * includes/theme-options.php - made functions pluggable
+ * includes/sidebar-init.php - made functions pluggable
+
+2010.06.25 - version 2.2.2
+ * style.css - Fixed Gravity forms styling bug
+
+2010.06.25 - version 2.2.1
+ * includes/template-magazine.php - Added workaround for pagination not working in WP 3.0 (when using as static homepage)
+ * includes/template-blog.php - Added workaround for pagination not working in WP 3.0 (when using as static homepage)
+
+2010.06.21 - version 2.2.0
+ * /includes/theme-actions.php - Added theme support for WordPress 3.0 Menu Management
+ * /includes/theme-functions.php - Added theme support for WordPress 3.0 Menu Management
+ * single.php - fixed comments closed bug (line 46)
+ * page.php - fixed comments closed bug (line 36)
+
+2010.06.09 - version 2.1.5
+ * style.css - Added styling for Gravity forms
+
+2010.05.17 - version 2.1.4
+ * /includes/theme-widgets.php - Modified to load files with alternative directory locations
+
+2010.04.28 - version 2.1.3
+ * search.php - sanitized search
+
+2010.04.26 - version 2.1.2
+ * includes/theme-actions.php - fix warning message about woo_embed on single posts
+
+2010.04.23 - version 2.1.1
+ * includes/theme-actions.php - only show embed div if embed code exists
+ * single.php - don't show single post image if post has embed code
+
+2010.04.13 - version 2.1
+ * includes/theme-actions.php - Added canvas_get_embed() function to show embed (custom field) on single posts
+ * style.css - .post .post-embed (line 221)
+ * footer.php - fixed IF (line 4-8) to show footer widgets again
+ * index.php - added exclude posts to query so slider posts are excluded if you use magazine template as front page.
+
+2010.04.07 - version 2.0.5
+ * includes/theme-actions.php - Fixed woo_nav function so it shows RSS in nav again.
+ * template-archives.php - Removed post-more
+ * template-sitemap.php - Removed post-more
+ * template-imagegallery.php - Removed post-more
+
+2010.04.07 - version 2.0.4
+ * /functions/* - MAJOR UPDATE - Framework V.2.7.0
+ * header.php - Added SEO tags, woo_title(); & woo_meta();
+ * functions.php - Changed layout for loading required files.
+ * includes/theme-actions.php - Fix JS error if using page template with slider disabled
+
+2010.04.05 - version 2.0.3
+ * includes/theme-actions.php - Fixed font styling in slider (line 369-385)
+
+2010.04.05 - version 2.0.2
+ * includes/theme-actions.php - Fix to slider javascript error: Load only on template pages
+
+2010.04.04 - version 2.0.1
+ * includes/widgets/woo-widget-embed.php - New widget embed/video
+ * includes/theme-options.php - Custom field for embed code in posts
+
+2010.04.04 - version 2.0
+ * includes/* - Major update to files/structure
+ * functions.php - updated Framework init include
+ * /functions/* - Updated WooFramework
+ * template-magazine.php - Magazine page template
+ * template-biz.php - Business page template
+ * style.css - New section 8 templates/slider styling
+ * css/ie6.css - IE6 fix for slider
+ * footer.php - Added option to hide footer widgets for biz template (line 4)
+ * header.php - Moved navigation to function in includes/theme-actions.php (line 69-101)
+ * index.php - Moved post-more to function in includes/theme-actions.php (line 38-41)
+ * archive.php - Moved post-more to function in includes/theme-actions.php (line 60-63)
+ * search.php - Moved post-more to function in includes/theme-actions.php (line 37-40)
+ * template-blog.php - Moved post-more to function in includes/theme-actions.php (line 37-41)
+
+2010.03.02 - version 1.1
+ * functions.php - Bugfix for blank page error on activate
+ * includes/theme-widgets.php - Added blog author widget
+ * style.css - added section 4.2 Blog author widget
+
+2010.02.25 - version 1.0.5
+ * /functions/ - Updated WooFramework v2.3.8 to fix save bug with checkboxes
+
+2010.02.16 - version 1.0.4
+ * /functions/ - Updated WooFramework v2.3.7
+
+2010.02.15 - version 1.0.3
+ * functions.php - Added new line for Beta version of framework updater.
+ * Framework Update - Added fix for missing $woo_options field.
+
+2010.02.10 - version 1.0.2
+ * footer.php - improved widgetized footer code (line 4-23)
+ * header.php - corrected "Subcribe" to "Subscribe"
+ * lang/canvas.po - corrected "Subcribe" to "Subscribe"
+ * /styles/*.css - removed #logo .site-title, #logo .site-description
+
+2010.02.10 - version 1.0.1
+ * header.php - removed class "title" from logo img (line 44)
+ * includes/theme-actions.php - margin:0 to .widget h3 if no bottom border
+
+2010.02.09 - version 1.0
+ * First release!

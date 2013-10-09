@@ -1,0 +1,28 @@
+/* 
+WOO CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles at the end of this file instead 
+of style.css so it is easier to update the theme. 
+Simply copy an existing style from style.css to this file, 
+and modify it to your liking.
+*/
+
+li.category-block {
+	list-style: none;
+	width: 128px;
+	height: 128px;
+	float: left;
+	margin: 10px 10px 10px 0;
+	background-color: #eee;
+	text-indent: -9999px;
+}
+
+li.category-block a {
+	width: 128px;
+	height: 128px;
+	display: block;
+}
+

@@ -1,0 +1,498 @@
+/*
+The styles in this stylesheet only apply to resolutions 768px and up
+
+CALCULATING DIMENSIONS:
+----------------------
+The layout is fluid. The sote wrapper (.col-full) has a fixed pixel max-width.
+All subsequent dimensions are calculated based on that fixed pixel width, using the formula: target / context = result
+Credit - http://www.alistapart.com/articles/fluidgrids/
+
+-----
+INDEX
+-----
+
+1. Global dropdown styles
+2. Top Navigation
+3. Main navigation dropdown menus
+4. General layout related tweaks
+
+*/
+/* Tablet Portrait size and sizes above 768 (devices and browsers) */
+@media only screen and (min-width: 768px) {
+  /* 1. GLOBAL DROPDOWN STYLES (these are purely for the dropdown layout and you should only edit the width of the dropdowns) */
+  ul.nav {
+    position: relative;
+    margin-bottom: 0;
+    width: auto;
+    margin-right: 30px;
+  }
+  ul.nav li {
+    position: relative;
+    float: left;
+    zoom: 1;
+    list-style: none;
+  }
+  ul.nav li a {
+    display: block;
+    padding-top: 1em!important;
+    padding-bottom: 1em!important;
+  }
+  ul.nav li a:hover {
+    text-decoration: none;
+  }
+  ul.nav li ul li a:hover {
+    text-decoration: underline;
+  }
+  ul.nav ul {
+    width: 12em;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9999;
+    margin: 0;
+    padding: 0.4em 0;
+  }
+  ul.nav ul li {
+    float: none;
+  }
+  ul.nav ul li a {
+    width: 100%;
+    display: inline-block;
+    padding: 0.7em 1em!important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 0.9em;
+  }
+  ul.nav ul ul {
+    left: 100%;
+    top: 0;
+  }
+  ul.nav li:hover > ul {
+    visibility: visible;
+  }
+  /*#wrapper #navigation ul.rss  { top: 0; right: 0; float: right; border: none; margin-bottom: 0; padding: 0 10px 0 0; }
+  	#wrapper #navigation ul.rss li  { margin: 0; display: inline; }
+  	#wrapper #navigation ul.rss li a  { padding: 13px 5px; }*/
+  /* 2. TOP NAVIGATION (Add top navigation presentational styles here) */
+  #top {
+    background: #000;
+  }
+  #top h3 {
+    display: none;
+  }
+  #top {
+    display: block!important;
+  }
+  #top ul.nav li a {
+    color: #ddd;
+    padding-top: 0.3em!important;
+    padding-bottom: 0.3em!important;
+    font-size: 0.9em;
+  }
+  #top ul.nav > li a:hover {
+    background: #555;
+    color: #ddd;
+  }
+  #top ul.nav > li:hover {
+    background: #555;
+    color: #ddd;
+  }
+  #top ul.nav ul {
+    background: #555;
+  }
+  #top ul.nav ul li a {
+    color: #ddd!important;
+  }
+  #top ul.nav li.current_page_item a,
+  #top ul.nav li.current_page_parent a,
+  #top ul.nav li.current-menu-ancestor a,
+  #top ul.nav li.current-cat a,
+  #top ul.nav li.current-menu-item a {
+    color: #333;
+  }
+  /* 3. MAIN NAVIGATION DROPDOWN MENUS (Add main navigation presentational styles here) */
+  #navigation .top-navigation {
+    display: none !important;
+  }
+  .csstransforms3d.csstransitions #navigation,
+  .csstransforms3d.csstransitions .show-nav #navigation,
+  .csstransforms3d.csstransitions .show-nav #inner-wrapper {
+    left: 0;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -moz-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+  }
+  .nav-toggle,
+  .nav-close,
+  .nav-home {
+    display: none !important;
+  }
+  #navigation {
+    position: relative;
+    left: auto;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    padding-top: 0;
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f5f5f5));
+    background: -webkit-linear-gradient(#ffffff, #f5f5f5);
+    background: -moz-linear-gradient(center top, #ffffff 0%, #f5f5f5 100%);
+    background: -moz-gradient(center top, #ffffff 0%, #f5f5f5 100%);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.03);
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.03);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    display: block !important;
+  }
+  #navigation h3 {
+    display: none;
+  }
+  #navigation .cart-contents {
+    position: static;
+    height: auto;
+    width: auto;
+    text-indent: 0;
+    display: inline-block;
+    padding: 0;
+    background: none;
+    color: inherit;
+    border-radius: 0 !important;
+    padding: 1em;
+  }
+  #navigation .cart-contents:before {
+    display: inline-block;
+    position: relative;
+    text-indent: 0;
+    line-height: 1;
+  }
+  #navigation .cart-contents {
+    margin-right: .5em;
+  }
+  #navigation .cart-contents:before {
+    margin-right: .5em;
+  }
+  #navigation .menus {
+    clear: none;
+  }
+  #navigation ul.rss {
+    margin: 0;
+  }
+  #navigation ul.rss.cart-enabled {
+    margin: 0;
+  }
+  #navigation ul.rss li a {
+    background: none;
+    color: #666;
+    padding: 1em;
+    margin: 0;
+  }
+  #navigation ul.rss li a:before {
+    line-height: 3.2;
+  }
+  #navigation ul.rss li a:hover {
+    color: #222;
+  }
+  #navigation ul {
+    margin-bottom: 0;
+  }
+  #navigation ul ul {
+    margin-left: 0;
+  }
+  #navigation ul li:first-child,
+  #navigation ul li:first-child a {
+    border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    -webkit-border-radius: 5px 0 0 5px;
+  }
+  #navigation ul ul li:first-child,
+  #navigation ul ul li:first-child a {
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+  }
+  #navigation ul.nav > li {
+    border-right: 1px solid #e6e6e6;
+  }
+  #navigation ul.nav > li a:hover {
+    background: #f6f6f6;
+  }
+  #navigation ul.nav > li:hover {
+    background: #f6f6f6;
+  }
+  #navigation ul.nav ul {
+    background: #f6f6f6;
+    border: 1px solid #e6e6e6;
+    left: -1px;
+  }
+  #navigation ul.nav ul ul {
+    top: -1px;
+    left: 100%;
+  }
+  #top .nav li.parent > a {
+    position: relative;
+    padding-right: 2em;
+  }
+  #top .nav li.parent > a:after {
+    content: "";
+    display: block;
+    border: .3em solid #ccc;
+    border-color: #ccc transparent transparent transparent;
+    position: absolute;
+    top: 48%;
+    right: .8751em;
+  }
+  #top .nav li ul li.parent a:after {
+    border-color: transparent transparent transparent #ccc;
+    right: .8751em;
+    top: 46%;
+  }
+  #navigation .nav li ul li.parent a {
+    padding-right: 0;
+  }
+  #navigation .nav li ul li.parent a:after {
+    border-color: transparent transparent transparent #ccc;
+    right: 0;
+    top: 46%;
+  }
+  #navigation .nav li.parent > a {
+    position: relative;
+    padding-right: 2em;
+  }
+  #navigation .nav li.parent > a:after {
+    content: "";
+    display: block;
+    border: 0.3em solid #ccc;
+    border-color: #ccc transparent transparent transparent;
+    position: absolute;
+    top: 48%;
+    right: .8751em;
+  }
+  #navigation .nav li ul li.parent a {
+    padding-right: 0;
+  }
+  #navigation .nav li ul li.parent a:after {
+    border-color: transparent transparent transparent #ccc;
+    right: 0.8751em;
+    top: 46%;
+  }
+  .full-width #navigation ul li:first-child,
+  .full-width #navigation ul li:first-child a {
+    border-radius: 0 !important;
+  }
+  /* 4. GENERAL LAYOUT RELATED TWEAKS */
+  /* Header */
+  #logo {
+    float: left;
+  }
+  #topad {
+    float: right;
+    margin: 0;
+  }
+  #nav-container {
+    margin-bottom: 3em;
+  }
+  /* Columns & Containers */
+  .col-left {
+    float: left;
+  }
+  .col-right {
+    float: right;
+  }
+  .col-full,
+  #wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+  #wrapper #sidebar {
+    margin-top: 0;
+  }
+  .magazine .block {
+    float: left;
+    width: 48%;
+  }
+  .magazine .block.last {
+    float: right;
+  }
+  /* Sliders */
+  #loopedSlider .content {
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    background: none;
+  }
+  #loopedSlider .content h2 {
+    float: left;
+    font-size: 26px;
+  }
+  #loopedSlider .content p {
+    clear: both;
+    float: left;
+  }
+  #loopedSlider .content p,
+  #loopedSlider .content h2 {
+    background: #000000;
+    background: rgba(0, 0, 0, 0.7);
+    max-width: 350px;
+  }
+  /* Sidebar */
+  #main-sidebar-container {
+    position: relative;
+  }
+  #main-sidebar-container #main {
+    position: relative;
+  }
+  #main-sidebar-container #sidebar {
+    display: inline;
+  }
+  #sidebar-alt {
+    display: inline;
+    margin: 0;
+  }
+  /* 	Widgets */
+  #main .widget_woothemes_features .feature {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+  }
+  #main .widget_woothemes_features .feature.last {
+    margin-right: 0;
+  }
+  #main .widget_woothemes_testimonials .quote {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+  }
+  #main .widget_woothemes_testimonials .quote.last {
+    margin-right: 0;
+  }
+  /* Footer */
+  #footer-widgets .block {
+    margin-right: 3.8%;
+    float: left;
+  }
+  /* 210 / 940 */
+  #footer-widgets.col-1 .block {
+    width: 100%;
+    margin-right: 0;
+  }
+  #footer-widgets.col-2 .block {
+    width: 48%;
+  }
+  #footer-widgets.col-3 .block {
+    width: 30.75%;
+  }
+  #footer-widgets.col-4 .block {
+    width: 22.05%;
+  }
+  #footer-widgets.col-2 .footer-widget-2,
+  #footer-widgets.col-3 .footer-widget-3,
+  #footer-widgets.col-4 .footer-widget-4 {
+    margin-right: 0;
+  }
+  /* Column Widths */
+  .one-col #main {
+    float: none;
+  }
+  .two-col-left #main-sidebar-container #main,
+  .two-col-right #main-sidebar-container #main {
+    width: 64.89%;
+  }
+  /* 610 / 940 */
+  .two-col-left #main-sidebar-container #sidebar,
+  .two-col-right #main-sidebar-container #sidebar {
+    width: 31.91%;
+  }
+  /* 300 / 940 */
+  .three-col-left #main-sidebar-container #sidebar,
+  .three-col-middle #main-sidebar-container #sidebar,
+  .three-col-right #main-sidebar-container #sidebar {
+    width: 39.47%;
+  }
+  /* 300 / 760 */
+  .three-col-left #main-sidebar-container,
+  .three-col-middle #main-sidebar-container,
+  .three-col-right #main-sidebar-container {
+    width: 80.85%;
+  }
+  /* 760 / 940 */
+  .three-col-left #main-sidebar-container #main,
+  .three-col-middle #main-sidebar-container #main,
+  .three-col-right #main-sidebar-container #main {
+    width: 57.89%;
+  }
+  /* 440 / 760 */
+  #sidebar-alt {
+    width: 17.02%;
+  }
+  /* 160 / 940 */
+  /* Column Floating */
+  .two-col-left #main-sidebar-container #main,
+  .two-col-right #main-sidebar-container #sidebar,
+  .three-col-left #main-sidebar-container,
+  .three-col-left #main-sidebar-container #main,
+  .three-col-middle #main-sidebar-container #main,
+  .three-col-middle #sidebar-alt,
+  .three-col-right #main-sidebar-container #sidebar,
+  .three-col-right #sidebar-alt {
+    float: left;
+  }
+  .two-col-left #main-sidebar-container #sidebar,
+  .two-col-right #main-sidebar-container #main,
+  .three-col-left #main-sidebar-container #sidebar,
+  .three-col-left #sidebar-alt,
+  .three-col-middle #main-sidebar-container,
+  .three-col-middle #main-sidebar-container #sidebar,
+  .three-col-right #main-sidebar-container,
+  .three-col-right #main-sidebar-container #main {
+    float: right;
+  }
+  /* Contact Page */
+  .page-template-template-contact-php .location-twitter .col-left {
+    float: left;
+  }
+  .page-template-template-contact-php .location-twitter #office-location {
+    width: 48%;
+    margin: 0 1em 0 0;
+  }
+  .page-template-template-contact-php .location-twitter .contact-social {
+    float: left;
+    width: 48%;
+  }
+  .page-template-template-contact-php .location-twitter .contact-social #twitter {
+    margin: 0;
+  }
+  /* Subcribe & Connect */
+  #main #connect .col-left {
+    float: left;
+  }
+  #connect .col-right {
+    float: right;
+  }
+  #main #connect .col-left,
+  #connect .col-right {
+    width: 48%;
+  }
+  #connect .related-posts {
+    border-top: 0;
+    border-left: 1px solid #e6e6e6;
+    padding-top: 0;
+    padding-left: 15px;
+    margin-top: 0;
+  }
+  .ie8 .business #loopedSlider a.flex-prev {
+    left: -20px;
+  }
+  .ie8 .business #loopedSlider a.flex-prev:before,
+  .ie8 .business #loopedSlider a.flex-next:before {
+    font-size: 16px;
+  }
+  .ie8 .business #loopedSlider a.flex-next {
+    right: -30px;
+  }
+}

@@ -1,0 +1,106 @@
+*** SMPL Changelog ***
+
+2013.02.22 - version 1.3.5
+ * includes/theme-woocommerce.php - WooCommerce 2.0 pagination preparation
+ * style.css - added .woocommerce-info styles
+
+2013.02.11 - version 1.3.4
+ * includes/theme-woocommerce.php - added WooCommerce support flag
+
+2013.01.29 - version 1.3.3
+ * includes/theme-woocommerce.php - Fixed cart fragment bug
+ * style.css - WooCommerce 2.0 styles (star rating in product archives)
+
+2013.01.15 - version 1.3.2
+ * includes/js/portfolio.js - fixed portfolio stacking bug with WP 3.5
+
+2013-01-09 - version 1.3.1
+ * includes/js/flexslider.min.js - updated to Flexslider 2.1
+ * style.css - updated .flex-active class for Flexslider 2.1
+
+2013-01-07 - version 1.3
+ * style.css
+ * css/layout.css
+ * styles/*.css - Styling preparation for WooCommerce 2.0 standardised class names (.woocommerce-)
+ * includes/theme-woocommerce.php - fixes duplicate upsells bug
+
+2012.12.24 - version 1.2.1
+ * index.php - fixed bug where all products had the same price
+
+2012.12.06 - version 1.2
+ * style.css - Styling preparation for WooCommerce 2.0
+ * index.php - WC_Product class replaced with get_product
+ * includes/theme-woocommerce.php - disable WooCommerce lightbox when prettyPhoto is enabled
+
+2012.11.12 - version 1.1.10
+ * template-contact.php - fixed logic for hiding contact details when not defined in theme options
+
+2012.09.17 - version 1.1.9
+ * includes/theme-actions.php
+   includes/theme-options.php - added site title font option
+
+2012.08.16 - version 1.1.8
+ * index.php - removed pagination
+
+2012.08.06 - version 1.1.7
+ * css/layout.css Fixed grid percentages for current Chrome
+
+2012.07.31 - version 1.1.6
+ * images/ico-subscribe-social.png - Updated Twitter Icon
+ * images/twitter.png - Updated Twitter Icon
+ * includes/widget/widget-woo-twitter.php - Added "Twitter" text for default widget title
+
+2012.07.26 - version 1.1.5
+ * includes/theme-woocommerce.php
+   css/layout.css - subcats are now clickable
+
+2012.07.20 - version 1.1.4
+ * includes/theme-js.php
+   includes/js/tabs.js - fixed homepage tabs for WooCommerce 1.6.0
+ * style.css
+   css/layout.css - attachment styles, term_description renamed to term-description
+
+2012.07.16 - version 1.1.3
+ * style.css improved Gravity Forms styling
+
+2012.06.18 - version 1.1.2
+ * style.css - Added styling for some Gravity forms items
+ * styles/*.css - Added styling for some Gravity forms items
+
+2012.05.22 - version 1.1.1
+ * index.php
+ * includes/js/general.js - slide titles are now links
+
+2012.05.22 - version 1.1.0
+ * /includes/theme-functions.php - Add logic to add CSS classes to the "body" tag and to load prettyPhoto's CSS and JavaScript if the "Enable Lightbox" theme option is checked.
+ * /includes/js/general.js - Add JavaScript logic to enable prettyPhoto lightboxes on all links to images, if the "Enable Lightbox" theme option is checked.
+
+2012.04.23 - version 1.0.24
+ * /includes/theme-options.php - Made custom typography default settings match theme defaults
+
+2012.04.17 - version 1.0.23
+ * /includes/theme-options.php - Removed test theme options and custom fields (previously commented out).
+ * /includes/homepage-portfolio-panel.php - Removed ".tooltip" CSS class from portfolio items, which was conflicting with the portfolio item titles in prettyPhoto.
+ * loop-portfolio.php - Removed ".tooltip" CSS class from portfolio items, which was conflicting with the portfolio item titles in prettyPhoto.
+
+2012.04.10 - version 1.0.22
+ * 404.php - fixed padding issue
+ * style.css - fixed image gallery margin issue and tidied archive template
+
+2012.04.04 - version 1.0.21
+ * includes/theme-actions.php - ensured custom typo settings override defaults
+ * style.css/layout.css - fixed a couple of mobile display bugs
+
+2012.04.04 - version 1.0.2
+ * css/layout.css - fixed mini features shortcode styling
+
+2012.03.29 - version 1.0.1
+ * lang/en_GB.po - scanned en_GB.po
+ * style.css/layout.css improved portfolio layout when using static pagination
+ * style.css/layout.css improved .woocommerce_tabs styling on mobile devices
+ * style.css/layout.css improved featured image handling in blog posts
+ * style.css/layout.css improved slider pagination on mobile devices
+ * includes/js/general.js improved handling of videos in slider
+
+2012.03.29 - version 1.0
+ * First release!
